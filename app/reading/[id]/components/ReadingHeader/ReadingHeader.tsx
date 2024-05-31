@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import Switch from "@/components/Switch/Switch";
 import Timer from "@/components/Timer/ReadingTimer";
-import { Part } from "../ReadingInterface";
+import { Part } from "../../../TestInterface";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 interface HeaderInterface {

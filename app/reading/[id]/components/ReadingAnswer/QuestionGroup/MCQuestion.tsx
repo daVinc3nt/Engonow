@@ -9,7 +9,7 @@ import {
 import {
 	Multiple_Choice_Question,
 	True_False_Question,
-} from "../../ReadingInterface";
+} from "../../../../TestInterface";
 
 interface Props {
 	question: Multiple_Choice_Question;
@@ -31,7 +31,7 @@ export default function MCQuestion({
 
 	const containerRef = useRef<HTMLDivElement>(null);
 	const headerRef = useRef<HTMLDivElement>(null);
-	
+
 	const [containerHeight, setContainerHeight] = useState<number>(10);
 	const [headerHeight, setHeaderHeight] = useState<number>(10);
 

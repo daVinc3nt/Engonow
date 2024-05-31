@@ -7,7 +7,7 @@ import {
 	useRef,
 	useState,
 } from "react";
-import { True_False_Question } from "../../ReadingInterface";
+import { True_False_Question } from "../../../../TestInterface";
 
 interface Props {
 	question: True_False_Question;

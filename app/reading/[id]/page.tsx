@@ -11,7 +11,7 @@ import {
 	QuestionGroup,
 	True_False_Question,
 	Fill_Question,
-} from "./components/ReadingInterface";
+} from "../TestInterface";
 import ReadingParagraph from "./components/ReadingParagraph/ReadingParagraph";
 import ReadingQuestionList from "./components/ReadingQuestionList/ReadingQuestionList";
 
