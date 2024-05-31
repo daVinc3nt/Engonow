@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import ReadingAnswer from "./components/ReadingAnswer/ReadingAnswer";
-import Header from "./components/ReadingHeader/ReadingHeader";
+import ReadingAnswer from "../components/ReadingAnswer/ReadingAnswer";
+import Header from "../components/ReadingHeader/ReadingHeader";
 
 import {
 	Test,
@@ -11,11 +11,11 @@ import {
 	QuestionGroup,
 	True_False_Question,
 	Fill_Question,
-} from "./components/ReadingInterface";
-import ReadingParagraph from "./components/ReadingParagraph/ReadingParagraph";
-import ReadingQuestionList from "./components/ReadingQuestionList/ReadingQuestionList";
+} from "../components/ReadingInterface";
+import ReadingParagraph from "../components/ReadingParagraph/ReadingParagraph";
+import ReadingQuestionList from "../components/ReadingQuestionList/ReadingQuestionList";
 
-import readingTest from "../../../public/reading-test/readingTest.json";
+import readingTest from "@/public/reading-test/readingTest.json";
 
 export default function Reading() {
 	const currentTest = readingTest;

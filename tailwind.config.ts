@@ -18,6 +18,7 @@ const config: Config = {
 			},
 			animation: {
 				tada: "tada 1s ease-in-out infinite",
+				tada_once: "tada 1s ease-in-out ",
 			},
 			keyframes: {
 				tada: {

@@ -48,7 +48,7 @@ export default function Home() {
 								title="IELTS Listening"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
 								bg="listening"
-								path="\listening\1"
+								path="\listening"
 							/>
 							<CourseCard
 								title="IELTS Writing"
