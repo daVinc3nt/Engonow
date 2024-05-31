@@ -1,6 +1,6 @@
 "use client";
 import React, { Dispatch, SetStateAction, useRef, useState } from "react";
-import { Part } from "../../../TestInterface";
+import { Part } from "../ReadingInterface";
 import QGroup from "./QuestionGroup/QGroup";
 
 interface ReadingAnswerProps {

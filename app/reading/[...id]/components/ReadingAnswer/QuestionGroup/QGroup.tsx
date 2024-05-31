@@ -7,7 +7,7 @@ import {
 	QuestionGroup,
 	True_False_Question,
 	Fill_Question,
-} from "../../../../TestInterface";
+} from "../../ReadingInterface";
 import FQuestion from "./FQuestion";
 import MCQuestion from "./MCQuestion";
 import TFQuestion from "./TFQuestion";

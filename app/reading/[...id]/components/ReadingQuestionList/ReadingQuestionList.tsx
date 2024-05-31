@@ -2,7 +2,7 @@ import ArrowLeftIcon from "@/components/Icon/ArrowLeft";
 import ArrowRightIcon from "@/components/Icon/ArrowRight";
 import { Dispatch, SetStateAction } from "react";
 import { motion } from "framer-motion";
-import { Part } from "../../../TestInterface";
+import { Part } from "../ReadingInterface";
 
 interface ReadingQuestionListProps {
 	answer: string[];

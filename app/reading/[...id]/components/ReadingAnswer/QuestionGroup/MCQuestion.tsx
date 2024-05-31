@@ -9,7 +9,7 @@ import {
 import {
 	Multiple_Choice_Question,
 	True_False_Question,
-} from "../../../../TestInterface";
+} from "../../ReadingInterface";
 
 interface Props {
 	question: Multiple_Choice_Question;

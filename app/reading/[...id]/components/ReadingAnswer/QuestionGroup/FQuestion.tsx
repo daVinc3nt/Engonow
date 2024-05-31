@@ -1,7 +1,7 @@
 "use client";
 
 import { Dispatch, SetStateAction } from "react";
-import { Fill_Question } from "../../../../TestInterface";
+import { Fill_Question } from "../../ReadingInterface";
 
 interface Props {
 	question: Fill_Question;

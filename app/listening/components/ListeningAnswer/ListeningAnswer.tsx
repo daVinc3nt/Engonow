@@ -23,18 +23,18 @@ export default function ListeningAnswer({
 			className="w-full h-full col-span-6 flex flex-col overflow-y-scroll gap-8 p-2 pb-40 max-lg:col-span-full">
 			{part.groupList.map((group, index) => {
 				return (
-					<div id="2"> 
 					<React.Fragment key={index}>
-						<QGroup
-							questionGroup={group}
-							answer={answer}
-							setAnswer={setAnswer}
-							open={open}
-							setOpen={setOpen}
-						/>
+						<div id="2">
+							<QGroup
+								questionGroup={group}
+								answer={answer}
+								setAnswer={setAnswer}
+								open={open}
+								setOpen={setOpen}
+							/>
+						</div>
 						<hr className="solid border-gray-300 border rounded-full w-full"></hr>
 					</React.Fragment>
-					</div>
 				);
 			})}
 

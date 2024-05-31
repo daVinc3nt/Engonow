@@ -1,16 +1,22 @@
 import { Dispatch, SetStateAction } from "react";
 import Switch from "@/components/Switch/Switch";
 import Timer from "@/components/Timer/ReadingTimer";
-import { Part } from "../../../TestInterface";
+import { Part } from "../ReadingInterface";
 import { Player } from "@lottiefiles/react-lottie-player";
 
 interface HeaderInterface {
 	value: boolean;
 	setValue: Dispatch<SetStateAction<boolean>>;
 	part: Part;
+	duration: number;
 }
 
-export default function Header({ value, setValue, part }: HeaderInterface) {
+export default function Header({
+	value,
+	setValue,
+	part,
+	duration,
+}: HeaderInterface) {
 	return (
 		<div className="w-full min-h-fit grid grid-cols-10 grid-rows-subgrid gap-2 max-lg:grid-cols-2 max-lg:grid-rows-2">
 			<div className="flex flex-row gap-4 items-center col-span-3 row-span-1 col-start-1 row-start-1 max-lg:col-span-1 max-lg:col-start-1">
@@ -24,7 +30,7 @@ export default function Header({ value, setValue, part }: HeaderInterface) {
 			</div>
 
 			<div className="w-full h-full col-span-2 row-span-2 col-start-5 row-start-1 flex items-center justify-center max-lg:col-span-1 max-lg:col-start-2 max-lg:row-span-1">
-				<Timer duration={3600} size={20} />
+				<Timer duration={duration} size={20} />
 			</div>
 
 			<div className="w-full h-full col-span-4 row-span-1 col-start-1 row-start-2 max-lg:col-span-2">

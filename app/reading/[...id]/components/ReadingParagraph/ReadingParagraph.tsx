@@ -3,13 +3,11 @@ import React, { useEffect, useState, useRef } from "react";
 
 interface ReadingParagraphProps {
 	highLight: boolean;
-	title: string;
 	paragraph: string;
 }
 
 export default function ReadingParagraph({
 	highLight,
-	title,
 	paragraph,
 }: ReadingParagraphProps) {
 	const contentRef = useRef<HTMLDivElement>(null);
@@ -59,7 +57,6 @@ export default function ReadingParagraph({
 		<div
 			ref={contentRef}
 			className="w-full h-full col-span-6 bg-primary flex flex-col lg:overflow-y-scroll gap-4 p-2 max-lg:col-span-full">
-			<div className="w-full h-fit text-2xl font-bold">{title}</div>
 			<div
 				className="w-full h-fit whitespace-pre-wrap"
 				dangerouslySetInnerHTML={{ __html: paragraph }}></div>

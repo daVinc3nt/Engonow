@@ -11,13 +11,13 @@ import {
 	QuestionGroup,
 	True_False_Question,
 	Fill_Question,
-} from "../TestInterface";
+} from "./components/ReadingInterface";
 import ReadingParagraph from "./components/ReadingParagraph/ReadingParagraph";
 import ReadingQuestionList from "./components/ReadingQuestionList/ReadingQuestionList";
 
-import readingTest from "../../../public/reading-test/readingTest.json";
+import readingTest from "@/public/reading-test/readingTest1.json";
 
-export default function Reading() {
+export default function Reading({ params }) {
 	const currentTest = readingTest;
 
 	const [currentPart, setPart] = useState<number>(1);
@@ -46,6 +46,7 @@ export default function Reading() {
 						value={highLight}
 						setValue={setHighLight}
 						part={part}
+						duration={params.id[1] * 60}
 					/>
 				</div>
 				<div
@@ -57,7 +58,6 @@ export default function Reading() {
 							<React.Fragment key={index}>
 								<ReadingParagraph
 									highLight={highLight}
-									title={part.title}
 									paragraph={part.paragraph}
 								/>
 								<ReadingAnswer
