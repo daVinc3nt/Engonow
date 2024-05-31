@@ -16,6 +16,7 @@ import ReadingParagraph from "./components/ReadingParagraph/ReadingParagraph";
 import ReadingQuestionList from "./components/ReadingQuestionList/ReadingQuestionList";
 
 import readingTest from "@/public/reading-test/readingTest1.json";
+import { get } from "http";
 
 export default function Reading({ params }) {
 	const currentTest = readingTest;
@@ -38,6 +39,11 @@ export default function Reading({ params }) {
 		myDiv.scrollTop = 0;
 	}, [currentPart]);
 
+	const getDuration = () => {
+		if (params.id[1] == undefined) return 60 * 60;
+		return params.id[1] * 60;
+	};
+
 	return (
 		<div className="w-full h-full flex flex-col flex-shrink gap-2 p-2 max-lg:h-fit">
 			<div className="h-full max-lg:h-fit bg-white border shadow-md shadow-gray-300 rounded-lg flex flex-col gap-4 p-4 lg:overflow-hidden">
@@ -46,7 +52,7 @@ export default function Reading({ params }) {
 						value={highLight}
 						setValue={setHighLight}
 						part={part}
-						duration={params.id[1] * 60}
+						duration={getDuration()}
 					/>
 				</div>
 				<div
