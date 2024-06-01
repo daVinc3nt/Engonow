@@ -37,7 +37,7 @@ export default function Home() {
 							</EaseIn>
 						</div>
 
-						<div className="w-full h-fit grid grid-cols-3 gap-4">
+						<div className="w-full h-fit grid md:grid-cols-3 gap-4 ">
 							<CourseCard
 								title="IELTS Reading"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."

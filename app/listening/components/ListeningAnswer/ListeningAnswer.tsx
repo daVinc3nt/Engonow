@@ -23,7 +23,7 @@ export default function ListeningAnswer({
 			className="w-full h-full col-span-6 flex flex-col overflow-y-scroll gap-8 p-2 pb-40 max-lg:col-span-full">
 			{part.groupList.map((group, index) => {
 				return (
-					<div id="2"> 
+					<div key={index}> 
 					<React.Fragment key={index}>
 						<QGroup
 							questionGroup={group}
