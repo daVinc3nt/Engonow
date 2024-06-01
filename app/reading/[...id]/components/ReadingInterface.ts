@@ -10,7 +10,7 @@ export interface Part {
 	partNumber: number;
 	startQuestion: number;
 	endQuestion: number;
-	title?: string;
+	requirement?: string;
 	paragraph?: string;
 	groupList: QuestionGroup[];
 }

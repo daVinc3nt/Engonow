@@ -31,7 +31,7 @@ export default function MCQuestion({
 
 	const containerRef = useRef<HTMLDivElement>(null);
 	const headerRef = useRef<HTMLDivElement>(null);
-	
+
 	const [containerHeight, setContainerHeight] = useState<number>(10);
 	const [headerHeight, setHeaderHeight] = useState<number>(10);
 

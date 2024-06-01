@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import ReadingAnswer from "../components/ReadingAnswer/ReadingAnswer";
-import Header from "../components/ReadingHeader/ReadingHeader";
+import ReadingAnswer from "./components/ReadingAnswer/ReadingAnswer";
+import Header from "./components/ReadingHeader/ReadingHeader";
 
 import {
 	Test,
@@ -11,13 +11,14 @@ import {
 	QuestionGroup,
 	True_False_Question,
 	Fill_Question,
-} from "../components/ReadingInterface";
-import ReadingParagraph from "../components/ReadingParagraph/ReadingParagraph";
-import ReadingQuestionList from "../components/ReadingQuestionList/ReadingQuestionList";
+} from "./components/ReadingInterface";
+import ReadingParagraph from "./components/ReadingParagraph/ReadingParagraph";
+import ReadingQuestionList from "./components/ReadingQuestionList/ReadingQuestionList";
 
-import readingTest from "@/public/reading-test/readingTest.json";
+import readingTest from "@/public/reading-test/readingTest1.json";
+import { get } from "http";
 
-export default function Reading() {
+export default function Reading({ params }) {
 	const currentTest = readingTest;
 
 	const [currentPart, setPart] = useState<number>(1);
@@ -33,31 +34,30 @@ export default function Reading() {
 	const [open, setOpen] = useState<boolean[]>(
 		Array(currentTest.numberOfQuestion).fill(false)
 	);
-	useEffect(() => {
-		var myDiv = document.getElementById("test-container");
-		myDiv.scrollTop = 0;
-	}, [currentPart]);
+
+	const getDuration = () => {
+		if (params.id[1] == undefined) return 60 * 60;
+		return params.id[1] * 60;
+	};
 
 	return (
-		<div className="w-full h-full flex flex-col flex-shrink gap-2 p-2 max-lg:h-fit">
-			<div className="h-full max-lg:h-fit bg-white border shadow-md shadow-gray-300 rounded-lg flex flex-col gap-4 p-4 lg:overflow-hidden">
+		<div className="flex flex-col flex-shrink w-full h-full gap-2 p-2 max-lg:h-fit">
+			<div className="flex flex-col h-full gap-4 p-4 bg-white border rounded-lg shadow-md max-lg:h-fit shadow-gray-300 lg:overflow-hidden">
 				<div className="w-full h-fit">
 					<Header
 						value={highLight}
 						setValue={setHighLight}
 						part={part}
+						duration={getDuration()}
 					/>
 				</div>
-				<div
-					id="test-container"
-					className="w-full h-full grid grid-cols-12 overflow-scroll lg:overflow-hidden">
+				<div className="grid w-full h-full grid-cols-12 overflow-scroll lg:overflow-hidden">
 					{currentTest.partList.map((part, index) => {
 						if (currentPart != index + 1) return null;
 						return (
 							<React.Fragment key={index}>
 								<ReadingParagraph
 									highLight={highLight}
-									title={part.title}
 									paragraph={part.paragraph}
 								/>
 								<ReadingAnswer
