@@ -24,7 +24,7 @@ export default function ListeningAnswer({
 			{part.groupList.map((group, index) => {
 				return (
 					<React.Fragment key={index}>
-						<div id="2">
+						<div>
 							<QGroup
 								questionGroup={group}
 								answer={answer}

@@ -19,7 +19,7 @@ export default function ReadingQuestionList({
 }: ReadingQuestionListProps) {
 	return (
 		<div className="w-full min-h-fit bg-white border rounded-lg shadow-md shadow-gray-300 grid grid-cols-12 p-2 gap-4">
-			<div className="col-span-10 h-full grid grid-cols-2 px-4 max-lg:grid-cols-1 max-lg:col-span-full gap-2">
+			<div className="col-span-10 overflow-x-scroll md:overflow-hidden py-2  h-fit grid grid-cols-2 px-4 max-lg:grid-cols-1 max-lg:col-span-full gap-2">
 				{Array.from({ length: partList.length }, (_, index) => {
 					const startQuestion = partList[index].startQuestion;
 					const endQuestion = partList[index].endQuestion;
@@ -28,7 +28,9 @@ export default function ReadingQuestionList({
 							key={index}
 							className="w-full h-full flex flex-row justify-start items-center font-bold gap-2 max-lg:flex-col max-lg:items-start">
 							<div className="text-xl">{`Part ${index + 1}:`}</div>
-							<div className="flex flex-row gap-1 w-fit h-fit">
+							<div
+							onClick={()=>setPart(index+1)} 
+							className="flex flex-row gap-1 w-fit h-fit">
 								{Array.from(
 									{
 										length: endQuestion - startQuestion + 1,
@@ -37,11 +39,15 @@ export default function ReadingQuestionList({
 										const questionNumber =
 											startQuestion + index;
 										return (
-											<div
+											<a
+												href={`#ques${questionNumber}`}
 												key={index}
-												className={`${answer[questionNumber - 1] == "" ? "bg-white text-red-400" : "bg-red-400 text-white"} w-7 h-7	 rounded-full border-2 hover:cursor-pointer border-red-200 max-lg:w-5 max-lg:h-5 flex justify-center items-center text-xs`}>
+												className={`${answer[questionNumber - 1] == "" ? "bg-white text-red-400" :
+												 "bg-red-400 text-white"} w-7 h-7	 rounded-full
+												 border-2 hover:cursor-pointer border-red-200 max-lg:w-5 max-lg:h-5 flex 
+												 justify-center items-center text-xs`}>
 												{questionNumber}
-											</div>
+											</a>
 										);
 									}
 								)}
@@ -50,7 +56,7 @@ export default function ReadingQuestionList({
 					);
 				})}
 			</div>
-			<div className="col-span-2 h-full max-lg:col-span-full grid grid-cols-2 gap-4">
+			<div className="col-span-2 h-fit max-lg:col-span-full grid grid-cols-2 gap-4">
 				{currentPart - 1 > 0 ? (
 					<motion.div
 						whileHover={{ scale: 1.1 }}
@@ -74,7 +80,7 @@ export default function ReadingQuestionList({
 						whileHover={{ scale: 1.1 }}
 						whileTap={{ scale: 1.0 }}
 						onClick={() => setPart(currentPart + 1)}
-						className="w-full h-full flex flex-row items-center justify-start gap-2c cursor-pointer">
+						className="w-full h-full flex flex-row items-center justify-start gap-2 cursor-pointer">
 						<div className="w-12 h-12 flex items-center justify-center">
 							<ArrowRightIcon
 								width={12}

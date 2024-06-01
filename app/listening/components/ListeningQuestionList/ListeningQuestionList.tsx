@@ -18,19 +18,19 @@ export default function ListeningQuestionList({
 	partList,
 }: ListeningQuestionListProps) {
 	return (
-		<div className="w-full min-h-fit bg-white border rounded-lg shadow-md shadow-gray-300 grid grid-cols-12 p-4 gap-4">
-			<div className="col-span-10 h-full grid grid-cols-2 px-4 max-lg:grid-cols-1 max-lg:col-span-full gap-2">
+		<div className="w-full min-h-fit bg-white border  rounded-lg shadow-md shadow-gray-300 grid grid-cols-12 p-4 gap-4">
+			<div className="col-span-10  h-fit grid grid-cols-2 px-4 max-lg:grid-cols-1 max-lg:col-span-full gap-2">
 				{Array.from({ length: partList.length }, (_, index) => {
 					const startQuestion = partList[index].startQuestion;
 					const endQuestion = partList[index].endQuestion;
 					return (
 						<div
 							key={index}
-							className="w-full h-full flex flex-row justify-start items-center font-bold gap-2 max-lg:flex-col max-lg:items-start">
+							className="w-full h-fit  flex flex-row justify-start items-center font-bold gap-2 max-lg:flex-col max-lg:items-start">
 							<div className="text-xl">{`Part ${index + 1}:`}</div>
 							<div 
 							onClick={()=>setPart(index+1)}
-							className="flex flex-row gap-1 w-fit h-fit">
+							className="flex flex-row  gap-1 w-fit h-fit">
 								{Array.from(
 									{
 										length: endQuestion - startQuestion + 1,
@@ -55,7 +55,7 @@ export default function ListeningQuestionList({
 					);
 				})}
 			</div>
-			<div className="col-span-2 h-full max-lg:col-span-full grid grid-cols-2 gap-4">
+			<div className="col-span-2 h-fit max-lg:col-span-full grid grid-cols-2 gap-4">
 				{currentPart - 1 > 0 ? (
 					<motion.div
 						whileHover={{ scale: 1.1 }}

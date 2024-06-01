@@ -20,7 +20,9 @@ export default function FQuestion({ question, answer, setAnswer }: Props) {
 	};
 
 	return (
-		<div className="w-full h-fit grid grid-cols-12 gap-2">
+		<div 
+		id={`ques${question.questionNumber}`}
+		className="w-full h-fit grid grid-cols-12 gap-2 group">
 			<div className="font-bold flex justify-center items-center max-md:col-span-2">
 				<div className="min-w-8 min-h-8 bg-red-400 rounded-full flex justify-center items-center text-white hover:cursor-pointer">
 					{question.questionNumber}
@@ -38,7 +40,7 @@ export default function FQuestion({ question, answer, setAnswer }: Props) {
 					type="text"
 					value={answer[answerIndex - 1]}
 					onChange={handleChangeInput}
-					className="w-full h-8 border-2 border-red-200 p-2 rounded-lg outline-none focus:border-transparent focus:outline focus:ring focus:ring-red-400 bg-primary focus:bg-white"
+					className="w-full h-8 group-target:ring group-target:ring-red-400 border-2 border-red-200 p-2 rounded-lg outline-none focus:border-transparent focus:outline focus:ring focus:ring-red-400 bg-primary focus:bg-white"
 				/>
 			</div>
 		</div>

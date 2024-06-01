@@ -25,7 +25,8 @@ export default function CourseCard({ title, description, bg, path }: Props) {
 				onClick={navigate}
 				className="w-full h-80 rounded-lg overflow-hidden shadow-md group">
 				<div
-					className={`w-full bg-${bg} bg-no-repeat bg-cover h-1/2 p-4`}></div>
+					style={{ backgroundImage: `url(${bg})` }}
+					className={`w-full bg-no-repeat bg-cover h-1/2 p-4`}></div>
 				<div className="w-full h-1/2 p-4 flex flex-col justify-between">
 					<EaseIn delay={0.1}>
 						<h2 className="group-hover:text-red-600 duration-200">

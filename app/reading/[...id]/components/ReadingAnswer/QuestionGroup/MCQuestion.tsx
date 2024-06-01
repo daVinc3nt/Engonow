@@ -126,6 +126,7 @@ export default function MCQuestion({
 				borderColor: open[questionIndex - 1] ? "#f87171" : "#fecaca",
 				backgroundColor: open[questionIndex - 1] ? "white" : "#F8F9FA",
 			}}
+			id={`ques${question.questionNumber}`}
 			ref={containerRef}
 			className={`w-full duration-300 overflow-hidden border-2 flex flex-col items-center gap-0 rounded-lg`}>
 			<div

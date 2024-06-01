@@ -4,18 +4,21 @@ import SlideIn from "@/components/AnimationWrapper/SlideIn";
 import { motion } from "framer-motion";
 import EaseIn from "@/components/AnimationWrapper/EaseIn";
 import CourseCard from "@/components/Card/CourseCard";
+import Image from "next/image";
 
 export default function Home() {
 	return (
 		<>
 			<NavBar />
 			<div className="w-full h-fit pt-14">
-				<div className="w-full h-144 bg-primary p-8">
-					<div className="w-full h-full rounded-lg border shadow-lg flex flex-col p-16 gap-4"></div>
+				<div className="w-full h-144 bg-primary md:p-8">
+					<div
+                      className="w-full h-full bg-center bg-general bg-contain bg-no-repeat rounded-lg border shadow-lg flex flex-col gap-4"
+					/>
 				</div>
 
-				<div className="w-full h-fit bg-white flex justify-center items-center p-8">
-					<div className="w-8/12 h-fit bg-primary rounded-lg border shadow-lg flex flex-col justify-start items-center p-4 gap-8">
+				<div className="w-full h-fit bg-white flex justify-center items-center md:p-8">
+					<div className=" h-fit bg-primary rounded-lg border shadow-lg flex flex-col justify-start items-center p-4 gap-8">
 						<div className="w-fit h-fit text-4xl font-bold">
 							<EaseIn>
 								<div>
@@ -23,7 +26,7 @@ export default function Home() {
 								</div>
 							</EaseIn>
 						</div>
-						<div className="w-10/12 h-fit text-xl font-semibold text-center">
+						<div className="p-4 w-full h-fit text-justify text-xl font-semibold">
 							<EaseIn delay={0.1}>
 								<div>
 									Engonow là một website luyện thi IELTS trực
@@ -41,32 +44,32 @@ export default function Home() {
 							<CourseCard
 								title="IELTS Reading"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
-								bg="reading"
+								bg="background/reading.png"
 								path="\reading"
 							/>
 							<CourseCard
 								title="IELTS Listening"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
-								bg="listening"
+								bg="background/listening.jpg"
 								path="\listening"
 							/>
 							<CourseCard
 								title="IELTS Writing"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
-								bg="writing"
+								bg="background/writing.jpg"
 								path=""
 							/>
 							<CourseCard
 								title="IELTS Speaking"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
-								bg="speaking"
+								bg="background/speaking.jpeg"
 								path=""
 							/>
 						</div>
 					</div>
 				</div>
 
-				<div className="w-full h-128 bg-primary p-8"></div>
+				<div className="w-full h-fit bg-primary p-8"></div>
 			</div>
 		</>
 	);

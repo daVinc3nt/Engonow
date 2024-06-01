@@ -104,8 +104,9 @@ export default function TFQuestion({
 				borderColor: open[questionIndex - 1] ? "#f87171" : "#fecaca",
 				backgroundColor: open[questionIndex - 1] ? "white" : "#F8F9FA",
 			}}
+			id={`ques${question.questionNumber}`}
 			ref={containerRef}
-			className={`w-full duration-300 overflow-hidden border-2 flex flex-col items-center gap-0 rounded-lg`}>
+			className={`w-full duration-300 target:ring target:ring-red-400 overflow-hidden border-2 flex flex-col items-center gap-0 rounded-lg`}>
 			<div
 				ref={headerRef}
 				onClick={() => handleOpenQuestion()}

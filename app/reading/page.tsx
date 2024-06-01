@@ -5,7 +5,7 @@ import { FaArrowRight, FaArrowLeft, FaBook } from "react-icons/fa";
 import CustomDropdown from "@/components/Common/Dropdown";
 import { useRouter } from "next/navigation";
 export default function Listening() {
-	const [time, setTime] = useState(40);
+	const [time, setTime] = useState(60);
 	const listTest = [readingTest];
 	const router = useRouter();
 	return (

@@ -49,6 +49,7 @@ const config: Config = {
 				listening: "url('../public/background/listening.jpg')",
 				writing: "url('../public/background/writing.jpg')",
 				speaking: "url('../public/background/speaking.jpeg')",
+				general: "url('../public/background/Logo_name.png')",
 			},
 		},
 	},

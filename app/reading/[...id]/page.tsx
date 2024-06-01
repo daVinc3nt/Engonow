@@ -51,7 +51,7 @@ export default function Reading({ params }) {
 						duration={getDuration()}
 					/>
 				</div>
-				<div className="grid w-full h-full grid-cols-12 overflow-scroll lg:overflow-hidden">
+				<div className="w-full h-full flex items-center justify-center flex-col lg:flex-row overflow-scroll lg:overflow-hidden">
 					{currentTest.partList.map((part, index) => {
 						if (currentPart != index + 1) return null;
 						return (
