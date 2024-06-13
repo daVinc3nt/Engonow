@@ -57,13 +57,13 @@ export default function Home() {
 								title="IELTS Writing"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
 								bg="background/writing.jpg"
-								path=""
+								path="\writing"
 							/>
 							<CourseCard
 								title="IELTS Speaking"
 								description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus mollis tempor. Maecenas sit amet scelerisque ex."
 								bg="background/speaking.jpeg"
-								path=""
+								path="\speaking"
 							/>
 						</div>
 					</div>

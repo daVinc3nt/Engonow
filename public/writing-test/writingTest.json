@@ -1,0 +1,44 @@
+{"writingtest":
+	[
+		{
+			"testID": "12345",
+			"testName": "Writing Test 1",
+			"numberOfQuestion": 2,
+			"duration": 60,
+			"partList": [
+                {
+                    "partNumber": 1,
+                    "startQuestion": 1,
+                    "endQuestion": 1,
+                    "paragraph": "<p>The diagram below shows the floor plan of a public library 20 years ago and how it looks now.</p>  <p>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p> <img src=\"https://lh4.googleusercontent.com/aSzZsRWdfSLy3tGVRzFbB-kp0LcI0SvJgZUVgp7jhSiZoIz0FAJZf7HJhxYK9u8AzFoEV2tDt3DdikWscar8-4FfGXMm3k7TQoS256tOdMFW6_LRz9gefehSZdz8ToIDP1r9vGt8G7h4s78ehifH1PQ\"/>"
+                },
+                {
+                    "partNumber": 2,
+                    "startQuestion": 2,
+                    "endQuestion": 2,
+                    "paragraph": "<p>Some university students want to learn about other subjects in addition to their main subjects. Others believe it is more important to give all their time and attention to studying for a qualification.</p>  <p>Discuss both these views and give your own opinion.</p>"
+                }
+            ]
+        },
+        {
+			"testID": "12346",
+			"testName": "Writing Test 2",
+			"numberOfQuestion": 2,
+			"duration": 60,
+			"partList": [
+                {
+                    "partNumber": 1,
+                    "startQuestion": 1,
+                    "endQuestion": 1,
+                    "paragraph": "<p>The diagram below shows the floor plan of a public library 20 years ago and how it looks now.</p>  <p>Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</p> <img scr=\"/writing-test/pic1.png\">"
+                },
+                {
+                    "partNumber": 2,
+                    "startQuestion": 2,
+                    "endQuestion": 2,
+                    "paragraph": "<p>Some university students want to learn about other subjects in addition to their main subjects. Others believe it is more important to give all their time and attention to studying for a qualification.</p>  <p>Discuss both these views and give your own opinion.</p>"
+                }
+            ]
+        }
+    ]
+}
